@@ -27,7 +27,7 @@ app.post("/email",  async (req, res, next) => {
       html: `${email} said, "Lets party in miami and get COVID!"`,
     };
 
-    const sendGridResponse = await sgMail.send(mailRes)
+    await sgMail.send(mailRes)
 
     res.status(200).send('Email sent successfully');
   
