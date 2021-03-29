@@ -7,6 +7,10 @@ const sgMail = require("@sendgrid/mail");
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static("public"))
+}
+
 app.use(helmet());
 
 app.use(cors({ credentials: true }));
