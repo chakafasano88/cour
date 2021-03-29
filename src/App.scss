@@ -10,20 +10,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'DevanagariSangam';
+    font-size: 18px;
+    .countdown {
+        background-color: #E1FF00;
+        padding: 10px
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 200px 0;
+        position: relative;
         .logo {
-            width: 57%;
+            position: relative;
+            width: 67%;
             height: auto;
             margin-bottom: 50px;
-            margin-left: 45px;
         }
-        .flag {
-            width: 80px;
-            object-fit: contain;
-            height: auto;
+        .logo-small {
+            position: absolute;
+            right: 0;
         }
         .text {
             display: flex;
@@ -33,13 +40,13 @@ body {
         }
         .flag-wrapper {
             align-items: center;
-            margin-top: 80px;
-            width: 50%;
+            margin-top: 50px;
+            width: 60%;
             display: flex;
             justify-content: space-between;
         }
         form {
-            width: 50%
+            width: 60%
         }
     }
     footer {
