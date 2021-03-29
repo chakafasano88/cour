@@ -57,14 +57,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chakafasano88/cour.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chakafasano88/cour/issues"
-  },
-  "homepage": "https://github.com/chakafasano88/cour#readme"
+  "license": "ISC"
 }

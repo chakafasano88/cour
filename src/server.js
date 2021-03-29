@@ -1,15 +1,13 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 const helmet = require("helmet");
 const cors = require("cors");
 const sgMail = require("@sendgrid/mail");
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static("public"))
-}
+app.use(express.static("../build"))
 
 app.use(helmet());
 
