@@ -40,9 +40,9 @@ const App = () => {
 
   const timerComponents = [];
 
-  Object.keys(timeLeft).forEach((interval) => {
+  Object.keys(timeLeft).forEach((interval, i) => {
     timerComponents.push(
-      <span>
+      <span key={i}>
         {timeLeft[interval]} {interval}{" "}
       </span>
     );
@@ -74,7 +74,6 @@ const App = () => {
             size="medium"
             type="text"
             value={email}
-            // variant="outlined"
           />
         </form>
         <div className="flag-wrapper">
