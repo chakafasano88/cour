@@ -41,7 +41,6 @@ const App = () => {
   const timerComponents = [];
 
   Object.keys(timeLeft).forEach((interval, i) => {
-    console.log('Inter', interval)
     timerComponents.push(
       <span key={i}>
         {timeLeft[interval]}{interval}{" "}
