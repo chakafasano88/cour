@@ -18,10 +18,10 @@ const App = () => {
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        d: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        h: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        m: Math.floor((difference / 1000 / 60) % 60),
+        s: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -41,9 +41,10 @@ const App = () => {
   const timerComponents = [];
 
   Object.keys(timeLeft).forEach((interval, i) => {
+    console.log('Inter', interval)
     timerComponents.push(
       <span key={i}>
-        {timeLeft[interval]} {interval}{" "}
+        {timeLeft[interval]}{interval}{" "}
       </span>
     );
   });
