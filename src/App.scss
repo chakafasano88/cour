@@ -8,7 +8,7 @@ body {
 
 .App {
   padding: 24px;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,7 @@ body {
     position: relative;
     .logo {
       position: relative;
-      width: 77%;
+      width: 65%;
       height: auto;
       margin-bottom: 50px;
     }
@@ -45,12 +45,12 @@ body {
     .flag-wrapper {
       align-items: center;
       margin-top: 50px;
-      width: 70%;
+      width: 40%;
       display: flex;
       justify-content: space-between;
     }
     form {
-      width: 70%;
+      width: 40%;
     }
   }
   footer {
@@ -71,24 +71,25 @@ body {
       padding: 50px 0;
       .logo {
         position: relative;
-        width: 90%;
+        width: 70%;
         height: auto;
         margin-bottom: 30px;
       }
       .logo-small {
         position: absolute;
         right: 0;
-        width: 18%;
+        width: 26%;
+        top: 6%
       }
       .flag-wrapper {
         align-items: center;
         margin-top: 50px;
-        width: 90%;
+        width: 70%;
         display: flex;
         justify-content: space-between;
       }
       form {
-        width: 90%;
+        width: 70%;
       }
     }
   }

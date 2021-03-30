@@ -43,7 +43,7 @@ const App = () => {
   Object.keys(timeLeft).forEach((interval, i) => {
     timerComponents.push(
       <span key={i}>
-        {timeLeft[interval]}{interval}{" "}
+        {timeLeft[interval]}{i < 3 && ' /'}
       </span>
     );
   });
@@ -68,7 +68,7 @@ const App = () => {
         <form onSubmit={sendEmail}>
           <TextField
             fullWidth
-            label="Enter email for updates"
+            label="enter email for updates"
             name="email"
             onChange={handleChange}
             size="medium"
