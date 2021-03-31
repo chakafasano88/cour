@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "DevanagariSangam";
-  font-size: 18px;
+  font-size: 14px;
   .countdown {
     background-color: #e1ff00;
     padding: 10px;
@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 200px 0;
+    padding: 50px 0;
     position: relative;
     .logo {
       position: relative;
@@ -39,7 +39,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      font-size: 18px;
+      font-size: 14px;
       padding: 10px
     }
     .flag-wrapper {
@@ -50,12 +50,15 @@ body {
       justify-content: space-between;
     }
     form {
-      width: 40%;
+      width: 30%;
       .MuiInputBase-root::before {
         border-color: transparent !important;
-        &:focus {
-          border-color: transparent !important;
-        }
+      }
+      .MuiInput-underline::after {
+        border-bottom: transparent !important;
+      }
+      .MuiFormLabel-root {
+        font-size: 14px;
       }
     }
   }

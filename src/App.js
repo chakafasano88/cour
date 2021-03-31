@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Logo, LogoSmall } from "./assets/img/images";
+import { Logo, LogoSmall, LogoFull } from "./assets/img/images";
 
 import { TextField } from "@material-ui/core";
 
@@ -63,8 +63,8 @@ const App = () => {
   return (
     <div className="App">
       <div className="wrapper">
-        <img className="logo" src={Logo} alt="Cour Logo" />
-        <img className="logo-small" src={LogoSmall} alt="Cour Logo" />
+        <img className="logo" src={LogoFull} alt="Cour Logo" />
+        {/* <img className="logo-small" src={LogoSmall} alt="Cour Logo" /> */}
         <form onSubmit={sendEmail}>
           <TextField
             fullWidth
