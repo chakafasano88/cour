@@ -53,7 +53,7 @@ const App = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_BASE_URL}/email`, { email })
+      await axios.post(`/email`, { email })
       setEmail('')
     } catch (e) {
       console.error(e)
@@ -64,7 +64,6 @@ const App = () => {
     <div className="App">
       <div className="wrapper">
         <img className="logo" src={LogoFull} alt="Cour Logo" />
-        {/* <img className="logo-small" src={LogoSmall} alt="Cour Logo" /> */}
         <form onSubmit={sendEmail}>
           <TextField
             fullWidth
