@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Logo, LogoSmall, LogoFull } from "./assets/img/images";
+import { LogoFull } from "./assets/img/images";
 
 import { TextField } from "@material-ui/core";
+import { endpoint, prodEndpoint } from './config'
 
 import "./App.scss";
 
@@ -53,7 +54,7 @@ const App = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`/email`, { email })
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/email`, { email })
       setEmail('')
     } catch (e) {
       console.error(e)
