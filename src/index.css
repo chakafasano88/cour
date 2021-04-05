@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'DevanagariSangam';
-  src: url('./assets/font/DevanagariSangamMN.ttc') format('ttc');
+  src: url('./assets/fonts/devanagarisangammn.ttf') format("truetype");
+  font-weight: normal;
 }
 
 body {

@@ -50,7 +50,7 @@ const App = () => {
   });
 
   const handleChange = ({ target }) => setEmail(target.value)
-  
+
   const sendEmail = async (e) => {
     e.preventDefault();
     try {

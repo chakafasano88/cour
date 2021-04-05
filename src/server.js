@@ -5,7 +5,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const sgMail = require("@sendgrid/mail");
 
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
 app.use(express.static("../build"))
 

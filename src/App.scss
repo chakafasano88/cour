@@ -40,17 +40,18 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       font-size: 14px;
-      padding: 10px
+      padding: 10px;
+      font-family: "DevanagariSangam";
     }
     .flag-wrapper {
       align-items: center;
       margin-top: 50px;
-      width: 40%;
+      width: 30%;
       display: flex;
       justify-content: space-between;
     }
     form {
-      width: 30%;
+      width: 20%;
       .MuiInputBase-root::before {
         border-color: transparent !important;
       }
@@ -98,7 +99,7 @@ body {
         justify-content: space-between;
       }
       form {
-        width: 55%;
+        width: 45%;
       }
     }
   }
