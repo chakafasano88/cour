@@ -72,6 +72,20 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className="bio">
+        <div className="story">[story]</div>
+        <p>
+          Story goes here blah blah blah blah loyalty blah blah blah de bloo de
+          blah blah blockchain, other words, stuff, hey is anyone even reading
+          this? we need to fill all of this with conscious marketing words that
+          will help us appeal to our demographics and get them to buy a F$%*load
+          of cour products instead of spending their money on crypto.
+          Alright..cour products are designed with conscious intention to break
+          down complex social structures by changing the world of furniture
+          design. viability becomes an afterthought
+        </p>
+      </div>
+      <h1 id="spinner">Will Coursen</h1>
       <div className="wrapper">
         <img className="logo" src={LogoFull} alt="Cour Logo" />
         <form onSubmit={sendEmail}>
@@ -100,9 +114,14 @@ const App = () => {
           title={title}
           key={`window-${id}`}
           onClose={() => handleOnCloseWindow(id)}
-          className={`${ hiddenWindows.find((window) => window === id) ? "hide" : ""} ${id}`}
+          // onClickContent={() => handleOnCloseWindow(id)}
+          className={`${
+            hiddenWindows.find((window) => window === id) ? "hide" : ""
+          } ${id}`}
         >
-          {images.map(({ src, alt }) => <img className="window-image" src={src} alt={alt} />)}
+          {images.map(({ src, alt }) => (
+            <img className="window-image" src={src} alt={alt} />
+          ))}
         </WindowsPopup>
       ))}
     </div>

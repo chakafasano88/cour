@@ -1,7 +1,7 @@
 import React from "react";
 import "./WindowsPopup.scss";
 
-const WindowsPopup = ({ className, onClose, title, children, id }) => {
+const WindowsPopup = ({ className, onClose,onClickContent, title, children }) => {
   return (
     <div className={`show-box ${className}`}>
       <div className="windows-header-wrapper">
@@ -22,7 +22,7 @@ const WindowsPopup = ({ className, onClose, title, children, id }) => {
           />
         </div>
       </div>
-      <div className="look-content">
+      <div onClick={onClickContent} className="look-content">
           {children}
       </div>
     </div>

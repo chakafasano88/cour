@@ -5,7 +5,10 @@ body {
 #root {
   height: 100%;
 }
-
+@font-face {
+  font-family: "CourierPrime";
+  src: url('./assets/fonts/CourierPrime-Regular.ttf');
+}
 .App {
   padding: 24px;
   height: auto;
@@ -15,6 +18,44 @@ body {
   font-family: "DevanagariSangam";
   font-size: 14px;
   position: relative;
+  .bio {
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.1;
+    p {
+      margin: 5px 0 !important;
+      font-family: 'CourierPrime';
+    }
+  }
+  .story {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  #spinner {
+    text-align: center;
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    font-size: 120px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 6;
+    font-weight: 800;
+  }
+  @keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
+  }
+  @keyframes depth {
+    0% { text-shadow: 0 0 black; }
+    25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+    50% { text-shadow: 0 0 black; }
+    75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+    100% { text-shadow: 0 0 black; }
+  }
   .countdown {
     background-color: #e1ff00;
     padding: 10px;
