@@ -119,21 +119,20 @@ body {
     width: 30vw;
     position: absolute !important;
     left: 10%;
-    top: 20%;
+    top: 18%;
     z-index: 10;
-    height: 75vh;
+    height: 80vh;
   }
   .popup-two {
     width: 40vw;
     position: absolute !important;
     right: 2%;
     z-index: 10;
-    top: 20%;
+    top: 18%;
     height: 40vh;
     .look-content {
       width: 100%;
       display: flex;
-      // align-items: center;
       flex-direction: row;
       overflow: hidden;
     }
