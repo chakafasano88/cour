@@ -1,0 +1,64 @@
+.show-box {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    background-color: #fff;
+    border: 4px ridge #d8d8d8;
+}
+
+.show-box {
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+.windows-header-wrapper {
+    background: linear-gradient(90deg, rgba(51,78,165,1) 0%, rgba(76,127,193,1) 100%);
+    position: absolute;
+    height: 25px;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-title {
+    font-size: 14px;
+    line-height: 1.2vw;
+    color: #fff;
+    width: calc(100% - 120px);
+    float: left;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.window-icons {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    float: left;
+    width: 120px;
+    img {
+        height: 0.8vw;
+        border: 1px outset #dad7d2;
+        cursor: pointer;
+        margin: 2px;
+    }
+}
+
+.look-content {
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+    // height: auto;;
+    // height: calc(100% -25px);
+}
+
+.hide {
+    display: none;
+}

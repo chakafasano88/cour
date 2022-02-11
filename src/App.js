@@ -3,12 +3,16 @@ import axios from "axios";
 import { LogoFull } from "./assets/img/images";
 
 import { TextField } from "@material-ui/core";
-import { endpoint, prodEndpoint } from './config'
+
+import WindowsPopup from "./components/WindowsPopup/WindowsPopup";
+
+import { windowData } from "./data/data";
 
 import "./App.scss";
 
 const App = () => {
   const [email, setEmail] = useState("");
+  const [hiddenWindows, setHiddenWindows] = useState([]);
 
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
@@ -44,22 +48,27 @@ const App = () => {
   Object.keys(timeLeft).forEach((interval, i) => {
     timerComponents.push(
       <span key={i}>
-        {timeLeft[interval]}{i < 3 && ' /'}
+        {timeLeft[interval]}
+        {i < 3 && " /"}
       </span>
     );
   });
 
-  const handleChange = ({ target }) => setEmail(target.value)
+  const handleChange = ({ target }) => setEmail(target.value);
 
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_BASE_URL}/email`, { email })
-      setEmail('')
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/email`, { email });
+      setEmail("");
     } catch (e) {
-      console.error(e)
+      console.error(e);
     }
-  }
+  };
+
+  const handleOnCloseWindow = (name) => {
+    setHiddenWindows([name, ...hiddenWindows]);
+  };
 
   return (
     <div className="App">
@@ -82,10 +91,20 @@ const App = () => {
             <div>S1. 2021</div>
           </div>
           <div className="countdown">
-            {timerComponents.length ? (timerComponents) : (<span>Time's up!</span>)}
+            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
           </div>
         </div>
       </div>
+      {windowData.map(({ id, images, title }, i) => (
+        <WindowsPopup
+          title={title}
+          key={`window-${id}`}
+          onClose={() => handleOnCloseWindow(id)}
+          className={`${ hiddenWindows.find((window) => window === id) ? "hide" : ""} ${id}`}
+        >
+          {images.map(({ src, alt }) => <img className="window-image" src={src} alt={alt} />)}
+        </WindowsPopup>
+      ))}
     </div>
   );
 };
